@@ -5,13 +5,47 @@
     <title>
     {% block title %}{% endblock %}
     </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
-    {% include 'header.html' %}
-    {% block headmessage %}{% endblock %}
-    <hr>
-    {% block content %}{% endblock %}
-    </hr>
-    {% include 'footer.html' %}
+    <div class="container-fluid">
+        {% include 'header.html' %}
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>MENU</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="list-group">
+                    <a href="/" class="list-group-item">首頁</a>
+                    <a href="http://chankue-bluesomeone.blogspot.com/p/blog-page_11.html" class="list-group-item">美食地圖</a>
+                    <a href="https://veganplayer.com/" class="list-group-item">旅遊指南</a>
+                    <a href="https://www.youtube.com/channel/UCiwt1aanVMoPYUt_CQYCPQg" class="list-group-item">國際新聞</a>
+                    <a href="/admin" class="list-group-item">後台管理</a>
+                    </div>
+                </div>
+            </div>
+      
+            <div class="col-sm-8 col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        {% block headmessage %}{% endblock %}
+                    </div>
+                    <div class="pane-body">
+                        <hr>
+                        {% block content %}{% endblock %}
+                        </hr>
+                    </div>
+                    <div class="panel-footer">
+                        {% include 'footer.html' %}
+                    <div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
 </body>
 </html>
