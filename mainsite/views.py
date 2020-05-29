@@ -17,7 +17,6 @@ def showpost(request, id):
     try:
         post = Post.objects.get(id=id)
         if post:
-            now = datetime.now()
             html = template.render(locals())
             return HttpResponse(html)
     except:
