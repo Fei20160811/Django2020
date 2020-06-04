@@ -13,9 +13,10 @@
     <p style="font-size:16pt;font-weight:bold;">
     <a href="/post/{{post.id}}">{{ post.question }}</a>
     </p>
+    <p style="font-size:12pt;letter-spacing:1pt;">{{ post.desc | truncatechars:90 }}</p>
     <p style="font-size:10pt;letter-spacing:1pt;">
     演算法：{{ post.algorithm }}<br/>
-    發佈時間：{{post.pubDate}}</p>
+    發佈時間：{{post.pubDate | date:"Y M d, h:i"}}</p>
     {% endfor %}   
     <hr>
 {% endblock %}
