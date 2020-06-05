@@ -13,7 +13,7 @@
     發佈時間：{{post.pubDate}}<br/>
     演算法：{{ post.algorithm }}
     </p>
-    <p style="font-size:12pt;letter-spacing:1pt;">題目描述：<br>{{post.desc}}</p>
-    <p style="font-size:12pt;letter-spacing:1pt;">答案：<br>{{post.answer}}</p>
+    <p style="font-size:12pt;letter-spacing:1pt;">題目描述：<br>{{post.desc | safe}}</p>
+    <p style="font-size:12pt;letter-spacing:1pt;">答案：<br>{{post.answer | safe }}</p>
     <hr>
 {% endblock %}
